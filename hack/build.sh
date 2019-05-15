@@ -17,6 +17,12 @@
 set -o errexit
 set -o nounset
 
+export GOPATH=`cd ../../../../ && pwd`
+PKG=github.com/oracle/mysql-operator
+ARCH=amd64
+OS=linux
+VERSION=0.3.1
+
 if [ -z "${PKG}" ]; then
     echo "PKG must be set"
     exit 1
